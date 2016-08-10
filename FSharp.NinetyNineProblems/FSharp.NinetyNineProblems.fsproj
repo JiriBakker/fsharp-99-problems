@@ -46,10 +46,10 @@
     <Compile Include="6.Palindrome.fs" />
     <Compile Include="17.ListSplitter.fs" />
     <Compile Include="18.Sublist.fs" />
-    <Compile Include="21.ItemInserter.fs" />
+    <Compile Include="19.ListRotator.fs" />
     <Compile Include="19.ListRotator.refactored.fs" />
     <Compile Include="20.ItemRemover.fs" />
-    <Compile Include="19.ListRotator.fs" />
+    <Compile Include="21.ItemInserter.fs" />
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
