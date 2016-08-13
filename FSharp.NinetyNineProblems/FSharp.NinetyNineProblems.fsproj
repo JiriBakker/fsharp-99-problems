@@ -43,13 +43,17 @@
     <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="4.ListLength.fs" />
+    <Compile Include="5.Reverse.fs" />
     <Compile Include="6.Palindrome.fs" />
+    <Compile Include="14.Duplicate.fs" />
     <Compile Include="17.ListSplitter.fs" />
     <Compile Include="18.Sublist.fs" />
     <Compile Include="19.ListRotator.fs" />
     <Compile Include="19.ListRotator.refactored.fs" />
     <Compile Include="20.ItemRemover.fs" />
     <Compile Include="21.ItemInserter.fs" />
+    <Compile Include="25.RandomPermutation.fs" />
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>

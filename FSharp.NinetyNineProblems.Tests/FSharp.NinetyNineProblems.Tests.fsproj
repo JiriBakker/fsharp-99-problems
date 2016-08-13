@@ -50,12 +50,16 @@
   </Choose>
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
+    <Compile Include="4.ListLengthTests.fs" />
+    <Compile Include="5.ReverseTests.fs" />
     <Compile Include="6.PalindromeTests.fs" />
+    <Compile Include="14.DuplicateTests.fs" />
     <Compile Include="17.ListSplitterTests.fs" />
     <Compile Include="18.SublistTests.fs" />
     <Compile Include="19.ListRotatorTests.fs" />
     <Compile Include="20.ItemRemoverTests.fs" />
     <Compile Include="21.ItemInserterTests.fs" />
+    <Compile Include="25.RandomPermutationTests.fs" />
     <Content Include="packages.config" />
     <Content Include="App.config" />
   </ItemGroup>
