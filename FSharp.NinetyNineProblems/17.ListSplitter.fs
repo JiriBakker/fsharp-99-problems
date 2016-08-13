@@ -7,12 +7,12 @@ module ListSplitter =
     let private splitWithRecursion inputList splitAtIndex =
         let rec splitRec list1 list2 counter =
             match counter with
-            | 0 -> (list1, list2)
+            | 0 -> (List.rev list1, list2)
             | _ -> 
                 match list2 with 
-                | [] -> (list1, list2)
-                | [x] -> (list1 @ list2, [])
-                | x::xs -> splitRec (list1 @ [x]) xs (counter - 1)
+                | [] -> (List.rev list1, list2)
+                | [x] -> ((List.rev list1) @ list2, [])
+                | x::xs -> splitRec (x :: list1) xs (counter - 1)
 
         let splitAtIndexSafe = min (max 0 splitAtIndex) (List.length inputList)
         splitRec [] inputList splitAtIndexSafe

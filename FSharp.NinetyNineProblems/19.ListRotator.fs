@@ -7,12 +7,12 @@ module ListRotatorInefficient =
     let private rotateWithRecursion inputList rotateAtIndex =
         let rec rotateRec inputList counter =
             match counter with
-            | 0 -> inputList
+            | 0 -> List.rev inputList
             | _ -> 
                 match inputList with
                 | []    -> []
                 | [x]   -> [x]
-                | x::xs -> rotateRec (xs @ [x]) (counter - 1)
+                | x::xs -> rotateRec (x :: xs) (counter - 1)
 
         let rec safeIndex index =
             match index with
@@ -37,5 +37,5 @@ module ListRotatorInefficient =
         
 
     let rotate inputList rotateAtIndex =
-        //rotateWithRecursion inputList rotateAtIndex
-        rotateWithListFunctions inputList rotateAtIndex
+        rotateWithRecursion inputList rotateAtIndex
+        //rotateWithListFunctions inputList rotateAtIndex

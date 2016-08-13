@@ -15,15 +15,15 @@ module ListRotator =
         let rotateAtIndexSafe = makeIndexSafe rotateAtIndex
 
         let rotateWithRecursion =
-            let rec rotateRec inputList counter =
+            let rec rotateRec inputList outputList counter =
                 match counter with
-                | 0 -> inputList
+                | 0 -> inputList @ (List.rev outputList)
                 | _ -> 
                     match inputList with
                     | []    -> []
-                    | x::xs -> rotateRec (xs @ [x]) (counter - 1)
+                    | x::xs -> rotateRec xs (x :: outputList) (counter - 1)
 
-            rotateRec inputList rotateAtIndexSafe
+            rotateRec inputList [] rotateAtIndexSafe
 
         let rotateWithListFunctions =
             (inputList |> List.skip rotateAtIndexSafe)
