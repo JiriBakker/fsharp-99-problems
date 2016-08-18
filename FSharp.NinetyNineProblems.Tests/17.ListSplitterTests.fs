@@ -48,6 +48,6 @@ type ListSplitterTests() =
         |> shouldEqual ([], [1; 2; 3; 4; 5])
 
     [<Test>]
-    member this.list_with_strings_spl() = 
+    member this.list_with_strings_splits_as_expected() = 
         ListSplitter.split ["aab"; "b"; "c"; "aa"] 2 
         |> should equal (["aab"; "b"], ["c"; "aa" ])
