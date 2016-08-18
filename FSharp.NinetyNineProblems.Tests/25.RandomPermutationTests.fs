@@ -8,15 +8,8 @@ open FSharp.NinetyNineProblems
 [<TestFixture>]
 type RandomPermutationTests() = 
 
-    let rec hasSameElementsRec list1 list2 =
-        match list1 with
-        | [] -> true
-        | x::xs when Seq.exists ((=) x) list2 -> hasSameElementsRec xs list2
-        | _ -> false
-
     let hasSameElements list1 list2 =
-        (Seq.length list1 = Seq.length list2)
-            && hasSameElementsRec list1 list2
+        (List.sort list1) = (List.sort list2)  
         
 
     [<Test>]
