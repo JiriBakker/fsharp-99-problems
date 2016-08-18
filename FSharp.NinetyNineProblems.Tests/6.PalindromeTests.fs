@@ -5,6 +5,8 @@ open FsUnit
 
 open FSharp.NinetyNineProblems
 
+// https://johncrane.gitbooks.io/ninety-nine-elm-problems/content/p/p06.html
+
 [<TestFixture>]
 type PalindromeTests() = 
 
