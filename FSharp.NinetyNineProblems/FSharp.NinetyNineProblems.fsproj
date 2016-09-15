@@ -43,6 +43,9 @@
     <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="1.LastElement.fs" />
+    <Compile Include="2.Penultimate.fs" />
+    <Compile Include="3.ElementAt.fs" />
     <Compile Include="4.ListLength.fs" />
     <Compile Include="5.Reverse.fs" />
     <Compile Include="6.Palindrome.fs" />
@@ -54,6 +57,7 @@
     <Compile Include="20.ItemRemover.fs" />
     <Compile Include="21.ItemInserter.fs" />
     <Compile Include="25.RandomPermutation.fs" />
+    <Compile Include="27.DisjointSubsets.fs" />
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>

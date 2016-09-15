@@ -50,6 +50,9 @@
   </Choose>
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
+    <Compile Include="1.LastElementTests.fs" />
+    <Compile Include="2.PenultimateTests.fs" />
+    <Compile Include="3.ElementAtTests.fs" />
     <Compile Include="4.ListLengthTests.fs" />
     <Compile Include="5.ReverseTests.fs" />
     <Compile Include="6.PalindromeTests.fs" />
@@ -60,6 +63,7 @@
     <Compile Include="20.ItemRemoverTests.fs" />
     <Compile Include="21.ItemInserterTests.fs" />
     <Compile Include="25.RandomPermutationTests.fs" />
+    <Compile Include="27.DisjointSubsetsTests.fs" />
     <Content Include="packages.config" />
     <Content Include="App.config" />
   </ItemGroup>
@@ -84,8 +88,6 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\FSharp.NinetyNineProblems\FSharp.NinetyNineProblems.fsproj">
       <Name>FSharp.NinetyNineProblems</Name>
       <Project>{5f3c1ed8-2e65-432e-b36c-68db3d1e51fd}</Project>
