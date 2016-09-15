@@ -50,12 +50,12 @@
   </Choose>
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
-    <Compile Include="1.LastElementTests.fs" />
-    <Compile Include="2.PenultimateTests.fs" />
-    <Compile Include="3.ElementAtTests.fs" />
-    <Compile Include="4.ListLengthTests.fs" />
-    <Compile Include="5.ReverseTests.fs" />
-    <Compile Include="6.PalindromeTests.fs" />
+    <Compile Include="01.LastElementTests.fs" />
+    <Compile Include="02.PenultimateTests.fs" />
+    <Compile Include="03.ElementAtTests.fs" />
+    <Compile Include="04.ListLengthTests.fs" />
+    <Compile Include="05.ReverseTests.fs" />
+    <Compile Include="06.PalindromeTests.fs" />
     <Compile Include="14.DuplicateTests.fs" />
     <Compile Include="17.ListSplitterTests.fs" />
     <Compile Include="18.SublistTests.fs" />

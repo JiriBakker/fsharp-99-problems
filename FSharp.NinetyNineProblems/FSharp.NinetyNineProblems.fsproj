@@ -43,12 +43,12 @@
     <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="1.LastElement.fs" />
-    <Compile Include="2.Penultimate.fs" />
-    <Compile Include="3.ElementAt.fs" />
-    <Compile Include="4.ListLength.fs" />
-    <Compile Include="5.Reverse.fs" />
-    <Compile Include="6.Palindrome.fs" />
+    <Compile Include="01.LastElement.fs" />
+    <Compile Include="02.Penultimate.fs" />
+    <Compile Include="03.ElementAt.fs" />
+    <Compile Include="04.ListLength.fs" />
+    <Compile Include="05.Reverse.fs" />
+    <Compile Include="06.Palindrome.fs" />
     <Compile Include="14.Duplicate.fs" />
     <Compile Include="17.ListSplitter.fs" />
     <Compile Include="18.Sublist.fs" />
