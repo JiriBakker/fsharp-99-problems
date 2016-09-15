@@ -4,5 +4,8 @@
 
 module LastElement =
 
-    let last (inputList:'a list) = 
-        Some(inputList.Head) // TODO
+    let rec last (inputList:'a list) = 
+        match inputList with
+        | []    -> None
+        | [x]   -> Some(x)
+        | x::xs -> last xs

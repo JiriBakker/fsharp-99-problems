@@ -4,5 +4,9 @@
 
 module Penultimate =
 
-    let penultimate (inputList:'a list) = 
-        Some(inputList.Head) // TODO
+    let rec penultimate (inputList:'a list) = 
+        match inputList with
+        | []    -> None
+        | [x]   -> None
+        | [x;_] -> Some(x)
+        | x::xs -> penultimate xs

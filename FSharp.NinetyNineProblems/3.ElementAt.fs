@@ -4,5 +4,8 @@
 
 module ElementAt =
 
-    let elementAt (inputList:'a list) index = 
-        Some(inputList.Head) // TODO
+    let rec elementAt (inputList:'a list) index = 
+        match (inputList, index) with
+        | ([], _)    -> None
+        | (x::xs, 1) -> Some(x)
+        | (x::xs, _) -> elementAt xs (index - 1)
