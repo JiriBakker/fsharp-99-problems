@@ -58,6 +58,7 @@
     <Compile Include="21.ItemInserter.fs" />
     <Compile Include="25.RandomPermutation.fs" />
     <Compile Include="27.DisjointSubsets.fs" />
+    <Compile Include="28b.LengthFrequencySorter.fs" />
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>

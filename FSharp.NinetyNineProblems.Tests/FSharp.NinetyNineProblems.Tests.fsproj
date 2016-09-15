@@ -64,6 +64,7 @@
     <Compile Include="21.ItemInserterTests.fs" />
     <Compile Include="25.RandomPermutationTests.fs" />
     <Compile Include="27.DisjointSubsetsTests.fs" />
+    <Compile Include="28b.LengthFrequencySorterTests.fs" />
     <Content Include="packages.config" />
     <Content Include="App.config" />
   </ItemGroup>
