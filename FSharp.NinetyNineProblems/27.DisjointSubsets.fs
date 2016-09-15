@@ -4,17 +4,25 @@
 
 module DisjointSubsets =    
 
-    let rec getPermutations maxSize (initial:'a list) (remaining:'a list) =
+    let rec getPermutations maxSize initial (remaining:'a list) =
         match maxSize with
-        | 0 -> [initial]
+        | 0                                 -> [initial]
         | _ when maxSize > remaining.Length -> []
-        | _ -> List.mapFoldBack (fun item acc -> ((getPermutations (maxSize - 1) (item :: initial) acc), item :: acc)) remaining [] 
-               |> (fun (perms, acc) -> List.concat perms)
-    
+        | _                                 -> List.mapFoldBack (fun item acc -> ((getPermutations (maxSize - 1) (item :: initial) acc), item :: acc)) remaining [] 
+                                               |> fst |> List.concat    
 
-    let group divisions (inputList:'a list) = 
-        getPermutations 2 [] inputList
-        |> List.map (fun set -> (set, (List.except set inputList)))
-        |> List.collect (fun (set, allExcept) -> (getPermutations 2 [] allExcept) |> List.map (fun secondSet -> [set; secondSet; (List.except secondSet allExcept)]))
+    let group divisions inputList =
+        let inputListExcept except = 
+            List.except (List.concat except) inputList
 
-                
+        divisions
+        |> List.fold 
+            (fun acc division -> 
+                acc
+                |> List.collect
+                    (fun existingSubsets -> 
+                        getPermutations division [] (inputListExcept existingSubsets)
+                        |> List.map (fun generatedSubset -> generatedSubset :: existingSubsets)
+                    )
+            )
+            [[]]
